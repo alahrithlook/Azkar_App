@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(color: const Color.fromARGB(255, 194, 190, 179),
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'أذكار المسلم',
       theme: ThemeData(
