@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'أذكار المسلم',
+      title: 'أذكار الصباح والمساء',
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),

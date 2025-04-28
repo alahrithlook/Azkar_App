@@ -18,11 +18,11 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           children: [
             const UserAccountsDrawerHeader(
-              accountName: Text('الحارث عبدالله باجاحر'),
-              accountEmail: Text('alharithbj@outlook.com'),
+              accountName: Text(' عبد الله علي سالم'),
+              accountEmail: Text('abdullahlali@outlook.com'),
               currentAccountPicture: CircleAvatar(
                 backgroundColor: Color.fromARGB(255, 189, 198, 190),
-                child: Icon(Icons.person, size: 40, color: Colors.green),
+                child: Icon(Icons.person_2_outlined, size: 40, color: Colors.green),
               ),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
               leading: const Icon(Icons.handshake),
               title: const Text('مسبحة إلكترونية'),
               onTap: () {
-                Navigator.push(
+                Navigator.push(   // دفع الى صفحة التسبيخ
                     context,
                     MaterialPageRoute(
                         builder: (context) => const TasbeehPage()));
@@ -55,12 +55,12 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               leading: const Icon(Icons.settings),
               title: const Text('الإعدادات'),
-              onTap: () {},
+              onTap: () {  Navigator.pop(context);},
             ),
             ListTile(
               leading: const Icon(Icons.logout),
               title: const Text('تسجيل الخروج'),
-              onTap: () {},
+              onTap: () {  Navigator.pop(context);},
             ),
           ],
         ),
@@ -101,8 +101,8 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: ListView.builder(
-        itemCount: Azkar_a.length,
-        itemBuilder: (context, index) {
+        itemCount: Azkar_a.length,  //يحدد عدد العناصر في القائمة (طول مصفوفة الأذكار)
+        itemBuilder: (context, index) {  //دالة تبني كل عنصر في القائمة عندما يصبح مرئياً 
           final azkar = Azkar_a[index];
 
           return Column(
@@ -132,8 +132,8 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
-                      onTap: () {
-                        Navigator.push(
+                      onTap: () {  
+                        Navigator.push(  // دفع الى صفحة الاذكار
                           context,
                           MaterialPageRoute(
                             builder: (context) => AzkarPage(
@@ -150,7 +150,7 @@ class _HomePageState extends State<HomePage> {
           );
         },
       ),
-      bottomNavigationBar: Padding(
+      bottomNavigationBar: Padding(     
         padding: const EdgeInsets.all(20.0),
         child: SizedBox(
           width: double.infinity,
@@ -170,12 +170,12 @@ class _HomePageState extends State<HomePage> {
               backgroundColor: const Color.fromARGB(255, 156, 174, 157),
               elevation: 8,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(25),
+                borderRadius: BorderRadius.circular(25), 
               ),
               padding: const EdgeInsets.symmetric(horizontal: 20),
             ),
             onPressed: () {
-              Navigator.push(
+              Navigator.push( // دفع الى صفحة التسبيح
                 context,
                 MaterialPageRoute(builder: (context) => const TasbeehPage()),
               );

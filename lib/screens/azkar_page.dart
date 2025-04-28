@@ -1,14 +1,14 @@
-import 'package:auto_size_text/auto_size_text.dart';
+import 'package:auto_size_text/auto_size_text.dart'; // استدعاء مكتبة النص التلقائي حسب حجم ال الكونتينر
 
 import 'package:azzkar_app/models/azkar_model.dart';
 import 'package:flutter/material.dart';
 
 class AzkarPage extends StatelessWidget {
-  final Azkar azkar;
+  final Azkar azkar;  //  تعريف متغير نهائي لجلب الاذكار 
 
   const AzkarPage({
     super.key,
-    required this.azkar,
+    required this.azkar, 
   });
 
   @override
@@ -31,6 +31,7 @@ class AzkarPage extends StatelessWidget {
           color: Colors.white,
         ),
       ),
+
       centerTitle: true,
       elevation: 10,
       backgroundColor: Colors.transparent, // شفاف لأنه فيه تدرج بالخلفية
@@ -51,22 +52,18 @@ class AzkarPage extends StatelessWidget {
 ),
       body: ListView(children: [
         Container(
-          margin: EdgeInsets.all(0),
-          padding: const EdgeInsets.all(10.0),
+          margin: EdgeInsets.all(0),   // المسافة بينه وبين العنص المجاور
+          padding: const EdgeInsets.all(10.0),   // المساحة حول المحتوى الداخلي
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Column(
-                children: [
-                  Column(
+            crossAxisAlignment: CrossAxisAlignment.center, 
                     children: [
                       Container(
                         padding: EdgeInsets.all(16.0),
-                        decoration: BoxDecoration(
+                        decoration: BoxDecoration(   // خاصية تحدد شكل ال container
                             color: const Color.fromARGB(255, 183, 177, 157),
                             borderRadius: BorderRadius.circular(16.0),
                             boxShadow: [
-                              BoxShadow(
+                              BoxShadow( // خاصية الحواف الخارجي لل container 
                                 color: const Color.fromARGB(255, 13, 13, 16),
                                 blurRadius: 9,
                                 offset: Offset(4, 4),
@@ -78,11 +75,11 @@ class AzkarPage extends StatelessWidget {
                               Icons.import_contacts,
                               color: Colors.green,
                             ),
-                            AutoSizeText(
-                              azkar.azkar1,
+                            AutoSizeText(     // خاصية توسيع النص تلقائي داخل ال container
+                              azkar.azkar1,  // هنا يكون استعاء المتغير
                               style: const TextStyle(
                                   fontSize: 30, fontWeight: FontWeight.bold),
-                              textAlign: TextAlign.center,
+                              textAlign: TextAlign.center,    // محاذاة النص
                             ),
                             Text(
                               'مرة واحدة',
@@ -99,7 +96,7 @@ class AzkarPage extends StatelessWidget {
                             color: const Color.fromARGB(255, 183, 177, 157),
                             borderRadius: BorderRadius.circular(16.0),
                             boxShadow: [
-                              BoxShadow(
+                              BoxShadow(   // 
                                 color: const Color.fromARGB(255, 13, 13, 16),
                                 blurRadius: 9,
                                 offset: Offset(4, 4),
@@ -126,10 +123,8 @@ class AzkarPage extends StatelessWidget {
                         ),
                       ),
                       Text("======================================="),
-                    ],
-                  ),
-                ],
-              ),
+                  
+                
               Container(
                 padding: EdgeInsets.all(16.0),
                 decoration: BoxDecoration(

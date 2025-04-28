@@ -1,43 +1,43 @@
-class Azkar {
+class Azkar {    // Azkar تعريف كلاس ب اسم 
   final String title; // عنوان الذكر
 
   final String azkar1;
   final String azkar2;
-  final String azkar3; // عنوان الذكر
+  final String azkar3; 
   final String azkar4;
-  final String azkar5; // نص الذكر
+  final String azkar5; 
   
     final String azkar6;
   final String azkar7;
-  final String azkar8; // عنوان الذكر
+  final String azkar8; 
   final String azkar9;
-  final String azkar10; // نص الذكر
+  final String azkar10; 
 
   final String azkar11;
   final String azkar12;
-  final String azkar13; // عنوان الذكر
+  final String azkar13;
   final String azkar14;
-  final String azkar15; // نص الذكر
+  final String azkar15; 
 
     final String azkar16;
   final String azkar17;
-  final String azkar18; // عنوان الذكر
+  final String azkar18; 
   final String azkar19;
   final String azkar20; 
     final String azkar21;
   final String azkar22;
-  final String azkar23; // عنوان الذكر
+  final String azkar23; 
   final String azkar24;
-  final String azkar25; // نص الذكر
+  final String azkar25; 
 
     final String azkar26;
   final String azkar27;
-  final String azkar28; // عنوان الذكر
+  final String azkar28; 
   final String azkar29;
   final String azkar30; 
-  // نص الذكر
   
-   // عدد مرات التكرار
+  
+
 
   Azkar({
     required this.title,

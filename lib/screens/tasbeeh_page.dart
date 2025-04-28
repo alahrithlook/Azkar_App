@@ -78,7 +78,7 @@ class _TasbeehPageState extends State<TasbeehPage> {
             const SizedBox(height: 40),
             ElevatedButton(
               onPressed: _incrementCounter,
-              child: const Text('سبّح',style: TextStyle(fontSize: 40,color: Color.fromARGB(255, 176, 191, 125)),),
+              child: const Text('سبّح',style: TextStyle(fontSize: 40,color: Color.fromARGB(255, 58, 168, 142)),),
             ),
             const SizedBox(height: 40),
             ElevatedButton(
