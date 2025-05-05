@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import '../data/azkar_data.dart';
 import 'tasbeeh_page.dart';
 import 'azkar_page.dart';
+import 'SettingsPage.dart';
+// ignore: unnecessary_import
+import 'package:flutter/services.dart';
+import 'dart:io';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -18,8 +23,8 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           children: [
             const UserAccountsDrawerHeader(
-              accountName: Text(' عبد الله علي سالم'),
-              accountEmail: Text('abdullahlali@outlook.com'),
+              accountName: Text('الحارث عبدالله باجاحر'),
+              accountEmail: Text('alharithbj@outlook.com'),
               currentAccountPicture: CircleAvatar(
                 backgroundColor: Color.fromARGB(255, 189, 198, 190),
                 child: Icon(Icons.person_2_outlined, size: 40, color: Colors.green),
@@ -55,13 +60,41 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               leading: const Icon(Icons.settings),
               title: const Text('الإعدادات'),
-              onTap: () {  Navigator.pop(context);},
+              onTap: () { Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const SettingsPage()),
+    );},
             ),
-            ListTile(
-              leading: const Icon(Icons.logout),
-              title: const Text('تسجيل الخروج'),
-              onTap: () {  Navigator.pop(context);},
+          ListTile(
+    leading: const Icon(Icons.logout),
+    title: const Text('تسجيل الخروج'),
+    onTap: () {
+       showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text("تأكيد الخروج"),
+          content: const Text("هل أنت متأكد أنك تريد تسجيل الخروج؟"),
+          actions: [
+            TextButton(
+              child: const Text("إلغاء"),
+              onPressed: () {
+                Navigator.pop(context); 
+              },
             ),
+            TextButton(
+              child: const Text("نعم"),
+              onPressed: () {
+                Navigator.pop(context); 
+                exit(0);
+              },
+            ),
+          ],
+        );
+      },
+    ); // ينهي التطبيق فوراً
+    },
+),
           ],
         ),
       ),
@@ -138,6 +171,7 @@ class _HomePageState extends State<HomePage> {
                           MaterialPageRoute(
                             builder: (context) => AzkarPage(
                               azkar: azkar,
+                            
                             ),
                           ),
                         );

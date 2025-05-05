@@ -4,11 +4,11 @@ import 'package:azzkar_app/models/azkar_model.dart';
 import 'package:flutter/material.dart';
 
 class AzkarPage extends StatelessWidget {
-  final Azkar azkar;  //  تعريف متغير نهائي لجلب الاذكار 
+  final Azkar azkar; //  تعريف متغير نهائي لجلب الاذكار
 
   const AzkarPage({
     super.key,
-    required this.azkar, 
+    required this.azkar,
   });
 
   @override
@@ -16,115 +16,365 @@ class AzkarPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 87, 130, 95),
       appBar: PreferredSize(
-  preferredSize: const Size.fromHeight(70), // ارتفاع الـ AppBar
-  child: ClipRRect(
-    borderRadius: const BorderRadius.only(
-      bottomLeft: Radius.circular(30),
-      bottomRight: Radius.circular(30),
-    ),
-    child: AppBar(
-      title:  Text(
-          azkar.title,
-        style: TextStyle(
-          fontSize: 40,
-          fontWeight: FontWeight.bold,
-          color: Colors.white,
-        ),
-      ),
+        preferredSize: const Size.fromHeight(70), // ارتفاع ال AppBar
+        child: ClipRRect(
+          borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(30),
+            bottomRight: Radius.circular(30),
+          ),
+          child: AppBar(
+            title: Text(
+              azkar.title,
+              style: TextStyle(
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
 
-      centerTitle: true,
-      elevation: 10,
-      backgroundColor: Colors.transparent, // شفاف لأنه فيه تدرج بالخلفية
-      flexibleSpace: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color.fromARGB(255, 90, 127, 129),
-              Color.fromARGB(255, 97, 152, 99),
-            ],
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
+            centerTitle: true,
+            elevation: 10,
+            backgroundColor: Colors.transparent, // شفاف لأنه فيه تدرج بالخلفية
+            flexibleSpace: Container(
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 90, 127, 129),
+                    Color.fromARGB(255, 97, 152, 99),
+                  ],
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                ),
+              ),
+            ),
           ),
         ),
       ),
+      body: PageView(
+  children: [
+    
+    Container(
+      margin: EdgeInsets.all(0),
+      padding: const EdgeInsets.all(10.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            padding: EdgeInsets.all(16.0),
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 183, 177, 157),
+              borderRadius: BorderRadius.circular(16.0),
+              boxShadow: [
+                BoxShadow(
+                  color: const Color.fromARGB(255, 13, 13, 16),
+                  blurRadius: 9,
+                  offset: Offset(4, 4),
+                ),
+              ],
+            ),
+            child: Column(
+              children: [
+                Icon(
+                  Icons.import_contacts,
+                  color: Colors.green,
+                ),
+                AutoSizeText(
+                  azkar.azkar1,
+                  style: const TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                Text(
+                  'مرة واحدة',
+                  style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    color: const Color.fromARGB(255, 86, 129, 87),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     ),
-  ),
+    Container(
+      margin: EdgeInsets.all(0),
+      padding: const EdgeInsets.all(10.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            padding: EdgeInsets.all(16.0),
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 183, 177, 157),
+              borderRadius: BorderRadius.circular(16.0),
+              boxShadow: [
+                BoxShadow(
+                  color: const Color.fromARGB(255, 13, 13, 16),
+                  blurRadius: 9,
+                  offset: Offset(4, 4),
+                ),
+              ],
+            ),
+            child: Column(
+              children: [
+                Icon(
+                  Icons.import_contacts,
+                  color: Colors.green,
+                ),
+                AutoSizeText(
+                  azkar.azkar2,
+                  style: const TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                Text(
+                  'مرة واحدة',
+                  style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    color: const Color.fromARGB(255, 86, 129, 87),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    ),
+  
+  Container(
+      margin: EdgeInsets.all(0),
+      padding: const EdgeInsets.all(10.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            padding: EdgeInsets.all(16.0),
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 183, 177, 157),
+              borderRadius: BorderRadius.circular(16.0),
+              boxShadow: [
+                BoxShadow(
+                  color: const Color.fromARGB(255, 13, 13, 16),
+                  blurRadius: 9,
+                  offset: Offset(4, 4),
+                ),
+              ],
+            ),
+            child: Column(
+              children: [
+                Icon(
+                  Icons.import_contacts,
+                  color: Colors.green,
+                ),
+                AutoSizeText(
+                  azkar.azkar3,
+                  style: const TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                Text(
+                  'مرة واحدة',
+                  style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    color: const Color.fromARGB(255, 86, 129, 87),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    ),
+    
+  Container(
+      margin: EdgeInsets.all(0),
+      padding: const EdgeInsets.all(10.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            padding: EdgeInsets.all(16.0),
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 183, 177, 157),
+              borderRadius: BorderRadius.circular(16.0),
+              boxShadow: [
+                BoxShadow(
+                  color: const Color.fromARGB(255, 13, 13, 16),
+                  blurRadius: 9,
+                  offset: Offset(4, 4),
+                ),
+              ],
+            ),
+            child: Column(
+              children: [
+                Icon(
+                  Icons.import_contacts,
+                  color: Colors.green,
+                ),
+                AutoSizeText(
+                  azkar.azkar4,
+                  style: const TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                Text(
+                  'مرة واحدة',
+                  style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    color: const Color.fromARGB(255, 86, 129, 87),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    ),
+    
+  Container(
+      margin: EdgeInsets.all(0),
+      padding: const EdgeInsets.all(10.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            padding: EdgeInsets.all(16.0),
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 183, 177, 157),
+              borderRadius: BorderRadius.circular(16.0),
+              boxShadow: [
+                BoxShadow(
+                  color: const Color.fromARGB(255, 13, 13, 16),
+                  blurRadius: 9,
+                  offset: Offset(4, 4),
+                ),
+              ],
+            ),
+            child: Column(
+              children: [
+                Icon(
+                  Icons.import_contacts,
+                  color: Colors.green,
+                ),
+                AutoSizeText(
+                  azkar.azkar5,
+                  style: const TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                Text(
+                  'مرة واحدة',
+                  style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    color: const Color.fromARGB(255, 86, 129, 87),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    ),
+  ],
 ),
-      body: ListView(children: [
+
+      /*body: PageView(children: [
         Container(
-          margin: EdgeInsets.all(0),   // المسافة بينه وبين العنص المجاور
-          padding: const EdgeInsets.all(10.0),   // المساحة حول المحتوى الداخلي
+          margin: EdgeInsets.all(0), // المسافة بينه وبين العنص المجاور
+          padding: const EdgeInsets.all(10.0), // المساحة حول المحتوى الداخلي
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center, 
-                    children: [
-                      Container(
-                        padding: EdgeInsets.all(16.0),
-                        decoration: BoxDecoration(   // خاصية تحدد شكل ال container
-                            color: const Color.fromARGB(255, 183, 177, 157),
-                            borderRadius: BorderRadius.circular(16.0),
-                            boxShadow: [
-                              BoxShadow( // خاصية الحواف الخارجي لل container 
-                                color: const Color.fromARGB(255, 13, 13, 16),
-                                blurRadius: 9,
-                                offset: Offset(4, 4),
-                              ),
-                            ]),
-                        child: Column(
-                          children: [
-                            Icon(
-                              Icons.import_contacts,
-                              color: Colors.green,
-                            ),
-                            AutoSizeText(     // خاصية توسيع النص تلقائي داخل ال container
-                              azkar.azkar1,  // هنا يكون استعاء المتغير
-                              style: const TextStyle(
-                                  fontSize: 30, fontWeight: FontWeight.bold),
-                              textAlign: TextAlign.center,    // محاذاة النص
-                            ),
-                            Text(
-                              'مرة واحدة',
-                              style: TextStyle(
-                                  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
-                            ),
-                          ],
-                        ),
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                padding: EdgeInsets.all(16.0),
+                decoration: BoxDecoration(
+                    // خاصية تحدد شكل ال container
+                    color: const Color.fromARGB(255, 183, 177, 157),
+                    borderRadius: BorderRadius.circular(16.0),
+                    boxShadow: [
+                      BoxShadow(
+                        // خاصية الحواف الخارجي لل container
+                        color: const Color.fromARGB(255, 13, 13, 16),
+                        blurRadius: 9,
+                        offset: Offset(4, 4),
                       ),
-                      Text("======================================="),
-                      Container(
-                        padding: EdgeInsets.all(16.0),
-                        decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 183, 177, 157),
-                            borderRadius: BorderRadius.circular(16.0),
-                            boxShadow: [
-                              BoxShadow(   // 
-                                color: const Color.fromARGB(255, 13, 13, 16),
-                                blurRadius: 9,
-                                offset: Offset(4, 4),
-                              ),
-                            ]),
-                        child: Column(
-                          children: [
-                            Icon(
-                              Icons.import_contacts,
-                              color: Colors.green,
-                            ),
-                            AutoSizeText(
-                              azkar.azkar2,
-                              style: const TextStyle(
-                                  fontSize: 30, fontWeight: FontWeight.bold),
-                              textAlign: TextAlign.center,
-                            ),
-                              Text(
-                              'مرة واحدة',
-                              style: TextStyle(
-                                  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
-                            ),
-                          ],
-                        ),
+                    ]),
+                child: Column(
+                  children: [
+                    Icon(
+                      Icons.import_contacts,
+                      color: Colors.green,
+                    ),
+                    AutoSizeText(
+                      // خاصية توسيع النص تلقائي داخل ال container
+                      azkar.azkar1, // هنا يكون استعاء المتغير
+                      style: const TextStyle(
+                          fontSize: 30, fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center, // محاذاة النص
+                    ),
+                    Text(
+                      'مرة واحدة',
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
+                    ),
+                  ],
+                ),
+              ),
+              Text("======================================="),
+              Container(
+                padding: EdgeInsets.all(16.0),
+                decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 183, 177, 157),
+                    borderRadius: BorderRadius.circular(16.0),
+                    boxShadow: [
+                      BoxShadow(
+                        //
+                        color: const Color.fromARGB(255, 13, 13, 16),
+                        blurRadius: 9,
+                        offset: Offset(4, 4),
                       ),
-                      Text("======================================="),
-                  
-                
+                    ]),
+                child: Column(
+                  children: [
+                    Icon(
+                      Icons.import_contacts,
+                      color: Colors.green,
+                    ),
+                    AutoSizeText(
+                      azkar.azkar2,
+                      style: const TextStyle(
+                          fontSize: 30, fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center,
+                    ),
+                    Text(
+                      'مرة واحدة',
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
+                    ),
+                  ],
+                ),
+              ),
+              Text("======================================="),
               Container(
                 padding: EdgeInsets.all(16.0),
                 decoration: BoxDecoration(
@@ -150,10 +400,12 @@ class AzkarPage extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                     Text(
-                              'ثلاث مرات',
-                              style: TextStyle(
-                                  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
-                            ),
+                      'ثلاث مرات',
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
+                    ),
                   ],
                 ),
               ),
@@ -183,10 +435,12 @@ class AzkarPage extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                     Text(
-                              'ثلاث مرات',
-                              style: TextStyle(
-                                  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
-                            ),
+                      'ثلاث مرات',
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
+                    ),
                   ],
                 ),
               ),
@@ -215,11 +469,13 @@ class AzkarPage extends StatelessWidget {
                           fontSize: 30, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center,
                     ),
-                      Text(
-                              'ثلاث مرات',
-                              style: TextStyle(
-                                  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
-                            ),
+                    Text(
+                      'ثلاث مرات',
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
+                    ),
                   ],
                 ),
               ),
@@ -248,11 +504,13 @@ class AzkarPage extends StatelessWidget {
                           fontSize: 30, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center,
                     ),
-                      Text(
-                              'مرة واحدة',
-                              style: TextStyle(
-                                  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
-                            ),
+                    Text(
+                      'مرة واحدة',
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
+                    ),
                   ],
                 ),
               ),
@@ -281,11 +539,13 @@ class AzkarPage extends StatelessWidget {
                           fontSize: 30, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center,
                     ),
-                      Text(
-                              'ثلاث مرات',
-                              style: TextStyle(
-                                  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
-                            ),
+                    Text(
+                      'ثلاث مرات',
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
+                    ),
                   ],
                 ),
               ),
@@ -314,11 +574,13 @@ class AzkarPage extends StatelessWidget {
                           fontSize: 30, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center,
                     ),
-                      Text(
-                              'أربع مرات',
-                              style: TextStyle(
-                                  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
-                            ),
+                    Text(
+                      'أربع مرات',
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
+                    ),
                   ],
                 ),
               ),
@@ -347,11 +609,13 @@ class AzkarPage extends StatelessWidget {
                           fontSize: 30, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center,
                     ),
-                      Text(
-                              'مرة واحدة',
-                              style: TextStyle(
-                                  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
-                            ),
+                    Text(
+                      'مرة واحدة',
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
+                    ),
                   ],
                 ),
               ),
@@ -380,11 +644,13 @@ class AzkarPage extends StatelessWidget {
                           fontSize: 30, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center,
                     ),
-                      Text(
-                              'سبع مرات',
-                              style: TextStyle(
-                                  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
-                            ),
+                    Text(
+                      'سبع مرات',
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
+                    ),
                   ],
                 ),
               ),
@@ -413,11 +679,13 @@ class AzkarPage extends StatelessWidget {
                           fontSize: 30, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center,
                     ),
-                      Text(
-                              'ثلاث مرات',
-                              style: TextStyle(
-                                  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
-                            ),
+                    Text(
+                      'ثلاث مرات',
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
+                    ),
                   ],
                 ),
               ),
@@ -447,9 +715,11 @@ class AzkarPage extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                     Text(
-                    'مرة واحدة',
-                      style:
-                          TextStyle(  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
+                      'مرة واحدة',
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
                     ),
                   ],
                 ),
@@ -479,11 +749,12 @@ class AzkarPage extends StatelessWidget {
                           fontSize: 30, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center,
                     ),
-
                     Text(
                       'مرة واحدة',
-                      style:
-                          TextStyle(  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
                     ),
                   ],
                 ),
@@ -515,8 +786,10 @@ class AzkarPage extends StatelessWidget {
                     ),
                     Text(
                       'ثلاث مرات',
-                      style:
-                          TextStyle(  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
                     ),
                   ],
                 ),
@@ -548,8 +821,10 @@ class AzkarPage extends StatelessWidget {
                     ),
                     Text(
                       'ثلاث مرات',
-                      style:
-                          TextStyle(  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
                     ),
                   ],
                 ),
@@ -581,8 +856,10 @@ class AzkarPage extends StatelessWidget {
                     ),
                     Text(
                       'ثلاث مرات',
-                      style:
-                          TextStyle(  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
                     ),
                   ],
                 ),
@@ -614,8 +891,10 @@ class AzkarPage extends StatelessWidget {
                     ),
                     Text(
                       'مرة واحدة',
-                      style:
-                          TextStyle(  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
                     ),
                   ],
                 ),
@@ -647,8 +926,10 @@ class AzkarPage extends StatelessWidget {
                     ),
                     Text(
                       'ثلاث مرات',
-                      style:
-                          TextStyle(  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
                     ),
                   ],
                 ),
@@ -657,7 +938,7 @@ class AzkarPage extends StatelessWidget {
               Container(
                 padding: EdgeInsets.all(16.0),
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 183, 177, 157),
+                    color: const Color.fromARGB(255, 183, 177, 157),
                     borderRadius: BorderRadius.circular(16.0),
                     boxShadow: [
                       BoxShadow(
@@ -679,9 +960,11 @@ class AzkarPage extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                     Text(
-                    'مرة واحدة',
-                      style:
-                          TextStyle(  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
+                      'مرة واحدة',
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
                     ),
                   ],
                 ),
@@ -713,8 +996,10 @@ class AzkarPage extends StatelessWidget {
                     ),
                     Text(
                       'مرة واحدة',
-                      style:
-                          TextStyle(  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
                     ),
                   ],
                 ),
@@ -746,8 +1031,10 @@ class AzkarPage extends StatelessWidget {
                     ),
                     Text(
                       'ثلاث مرات',
-                      style:
-                          TextStyle(  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
                     ),
                   ],
                 ),
@@ -778,10 +1065,12 @@ class AzkarPage extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                     Text(
-                              'عشر مرات',
-                              style: TextStyle(
-                                  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
-                            ),
+                      'عشر مرات',
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
+                    ),
                   ],
                 ),
               ),
@@ -811,10 +1100,12 @@ class AzkarPage extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                     Text(
-                              'ثلاث مرات',
-                              style: TextStyle(
-                                  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
-                            ),
+                      'ثلاث مرات',
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
+                    ),
                   ],
                 ),
               ),
@@ -844,10 +1135,12 @@ class AzkarPage extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                     Text(
-                              'ثلاث مرات',
-                              style: TextStyle(
-                                  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
-                            ),
+                      'ثلاث مرات',
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
+                    ),
                   ],
                 ),
               ),
@@ -878,8 +1171,10 @@ class AzkarPage extends StatelessWidget {
                     ),
                     Text(
                       'ثلاث مرات',
-                      style:
-                          TextStyle(  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
                     ),
                   ],
                 ),
@@ -911,8 +1206,10 @@ class AzkarPage extends StatelessWidget {
                     ),
                     Text(
                       'ثلاث مرات',
-                      style:
-                          TextStyle(  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
                     ),
                   ],
                 ),
@@ -944,8 +1241,10 @@ class AzkarPage extends StatelessWidget {
                     ),
                     Text(
                       'مرة واحدة',
-                      style:
-                          TextStyle(  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
                     ),
                   ],
                 ),
@@ -977,8 +1276,10 @@ class AzkarPage extends StatelessWidget {
                     ),
                     Text(
                       'مرة واحدة',
-                      style:
-                          TextStyle(  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
                     ),
                   ],
                 ),
@@ -1010,8 +1311,10 @@ class AzkarPage extends StatelessWidget {
                     ),
                     Text(
                       'مئة مره',
-                      style:
-                          TextStyle(  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
                     ),
                   ],
                 ),
@@ -1043,17 +1346,21 @@ class AzkarPage extends StatelessWidget {
                     ),
                     Text(
                       'مئة مره',
-                      style:
-                          TextStyle(  fontSize: 40, fontWeight: FontWeight.bold,color: const Color.fromARGB(255, 86, 129, 87)),
+                      style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 86, 129, 87)),
                     ),
                   ],
                 ),
               ),
-            
             ],
           ),
         ),
-      ]),
+      ]
+      ),*/
+
     );
   }
+  
 }

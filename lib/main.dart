@@ -11,10 +11,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'أذكار الصباح والمساء',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
       home: const HomePage(),
     );
   }
